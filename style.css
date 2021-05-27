@@ -1,0 +1,1090 @@
+/* *************************** Default Css Start *************************** */
+
+body, p, span, a {
+    font-family: 'Roboto', sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Rubik', sans-serif !important;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.primary-btn {
+    font-weight: 600;
+    padding: 13px 38px;
+    background: #E73C3E !important;
+    border-radius: .3rem;
+    position: relative;
+    z-index: 1;
+    border: none;
+}
+
+.primary-btn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #111;
+    transition: .4s;
+    z-index: -1;
+    border: none;
+    border-radius: .3rem;
+}
+
+.primary-btn:hover::after {
+    width: 100%;
+    border: none;
+    border-radius: .3rem;
+}
+
+.menu-active-text {
+    color: #E73C3E;
+    letter-spacing: 1px;
+}
+
+.menu-active-text:hover {
+    color: #E73C3E;
+}
+
+.primary-title span {
+    color: #E73C3E;
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.primary-title h3 {
+    font-size: 36px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 600;
+}
+
+.primary-title p {
+    font-size: 17px;
+    color: #606060;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.default-bg {
+    background-color: #F9FAFB;
+    ;
+}
+
+/* *************************** Default Css End *************************** */
+
+/* *************************** Header Section Css Start *************************** */
+
+header {
+    z-index: 9999;
+    background-color: #ffffff;
+}
+
+ul.header-primary-menu li {
+    position: relative;
+}
+
+ul.header-primary-menu li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    top: 100%;
+}
+
+ul.header-primary-menu li a {
+    display: inline-block;
+    padding: 14px 16px;
+    font-weight: 600;
+    transition: .4s;
+}
+
+ul.header-primary-menu li a span {
+    font-size: 10px;
+}
+
+ul.header-primary-menu li a:hover {
+    color: #E73C3E;
+}
+
+/* Dropdown Css */
+
+ul.header-primary-menu li ul {
+    position: absolute;
+    left: 19px;
+    top: 120%;
+    background-color: #fff;
+    width: 240px;
+    padding-left: 0;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    opacity: 0;
+    visibility: hidden;
+    padding: 10px;
+    transition: all .4s ease-in-out;
+    z-index: 2;
+}
+
+ul.header-primary-menu li ul li a {
+    transition: .4s;
+    padding: 9px 16px;
+}
+
+ul.header-primary-menu li ul li a:hover {
+    letter-spacing: 1px;
+    color: #E73C3E;
+}
+
+/* Sub Dropdown Menu Css */
+
+ul.header-primary-menu li ul li.sub-dropdown {
+    position: relative;
+}
+
+ul.header-primary-menu li ul li.sub-dropdown:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(-42px);
+}
+
+ul.header-primary-menu li ul li.sub-dropdown ul {
+    position: absolute;
+    left: -250px;
+    transform: translateY(-25px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.sub-dropdown span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
+    margin: 0;
+}
+
+.header-right .header-right-search {
+    width: 55px;
+    font-size: 20px;
+    margin-right: 14px;
+    text-align: center;
+    border-right: 1px solid #dadada;
+    position: relative;
+}
+
+.header-right .header-right-callnow {
+    width: 195px;
+    margin-right: 30px;
+}
+
+.header-callnow-icon span {
+    font-size: 33px;
+    color: #E73C3E;
+}
+
+.header-callnow-info span {
+    color: #606060;
+}
+
+.header-callnow-info a {
+    font-weight: 600;
+}
+
+.header-callnow-info a:hover {
+    color: black;
+}
+
+.header-right .header-right-btn {
+    width: 160px;
+}
+
+.header-right .header-right-search .fa-times {
+    margin-left: -27px;
+    font-size: 27px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header-right .header-right-search:hover .fa-times {
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-right .header-right-search:hover .search-icon {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.header-right .header-right-search:hover .search-hover {
+    opacity: 1;
+    visibility: visible;
+    top: 145%;
+}
+
+.search-hover {
+    width: 300px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 10%);
+    position: absolute;
+    top: 160%;
+    right: 17px;
+    transition: .4s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.search-hover .search-form {
+    position: relative;
+}
+
+.search-hover .search-form input {
+    width: 100%;
+    height: 50px;
+    display: block;
+    border: 1px solid #eee;
+    color: #111;
+    padding-left: 10px;
+    transition: .5s;
+    font-size: 17px;
+    padding-top: 5px;
+}
+
+.search-hover .search-form input:focus-visible {
+    outline: none;
+}
+
+.search-hover .search-form input:focus {
+    border: 1px solid #E73C3E;
+}
+
+.search-hover .search-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: none;
+    color: #606060;
+    outline: none;
+    font-size: 16px;
+    padding: 0;
+    transition: .4s;
+}
+
+.search-hover .search-form button:hover {
+    color: #E73C3E;
+}
+
+/* *************************** Header Section Css End *************************** */
+
+/* *************************** Slider Section Css Start *************************** */
+
+.slider-section {
+    background: url(./images/main-banner2.jpg) no-repeat center center;
+    background-size: cover;
+    height: 700px;
+    background-attachment: fixed;
+}
+
+.slider-section .primary-title h3 {
+    font-size: 4rem;
+}
+
+.slider-section .primary-title p {
+    font-size: 18px;
+}
+
+.slider-content-wrapper {
+    display: flex;
+    height: 750px;
+    align-items: center;
+    position: relative;
+}
+
+.slider-social {
+    margin-bottom: 50px;
+    position: absolute;
+    top: 90%;
+    left: 0;
+}
+
+.slider-social ul li span {
+    font-size: 18px;
+    margin-right: 42px;
+    position: relative;
+}
+
+.slider-social ul li span::after {
+    position: absolute;
+    right: -38px;
+    top: 10px;
+    width: 30px;
+    content: '';
+    height: 1px;
+    background-color: #111;
+}
+
+.slider-social ul li a {
+    padding: 0 15px;
+}
+
+.slider-social ul li a i {
+    transition: .4s;
+}
+
+.slider-social ul li a i:hover {
+    color: #E73C3E;
+}
+
+/* *************************** Slider Section Css End *************************** */
+
+/* *************************** Slider Bottom Section Css Start *************************** */
+
+.slider-bottom-section {
+    border-bottom: 1px solid #ddd;
+}
+
+/* *************************** Slider Bottom Section Css End *************************** */
+
+/* *************************** About Section Css Start *************************** */
+
+.about-left-img {
+    position: relative;
+}
+
+.about-img-text-wrapper {
+    position: absolute;
+    bottom: 7px;
+    right: 62px;
+    background: url(./images/shape.png) no-repeat center center;
+    background-size: contain;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img-text h2 {
+    font-size: 4rem;
+    color: #E73C3E;
+    font-weight: bold;
+}
+
+.about-img-text p {
+    font-size: 1.1rem;
+}
+
+.about-right-content .primary-title h3 {
+    font-size: 38px;
+    margin-top: 5px;
+}
+
+.about-right-content .primary-title p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.about-right-content ul li {
+    color: #606060;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.about-right-content ul li::before {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    color: #E73C3E;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* *************************** About Section Css End *************************** */
+
+/* *************************** Why Choose Us Section Css Start *************************** */
+
+.why-choose-us .primary-title span {
+    margin-bottom: 10px;
+}
+
+.why-choose-us .primary-title h3 {
+    font-weight: 600;
+}
+
+.why-choose-us .primary-title p {
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+.feature-items .feature-item {
+    background-color: #fff;
+    padding: 30px;
+    position: relative;
+    transition: .5s;
+    overflow: hidden;
+    margin-bottom: 30px;
+    z-index: 1;
+}
+
+.feature-items .feature-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -110px;
+    right: 0;
+    height: 65%;
+    width: 90%;
+    background-color: #fdebeb;
+    border-radius: 50%;
+    z-index: -1;
+    margin: auto;
+}
+
+.feature-items .feature-item .fi-icon {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 50%;
+    font-size: 50px;
+    color: #E73C3E;
+    transition: .5s;
+}
+
+.feature-items .feature-item h3 {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.feature-items .feature-item p {
+    margin-bottom: 0;
+    line-height: 1.8;
+    color: #606060;
+    font-size: 16px;
+}
+
+.feature-items .col-lg-6:first-child {
+    margin-top: 30px;
+}
+
+.feature-items .col-lg-6:nth-child(4) {
+    margin-top: -30px;
+}
+
+.feature-item:hover .fi-icon {
+    color: #fff;
+    background-color: #E73C3E;
+}
+
+.feature-item:hover {
+    transform: translateY(-10px);
+}
+
+.play-animation-btn {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 9%);
+    position: absolute;
+    right: 40%;
+    bottom: 11%;
+    transition: .5s;
+}
+
+.play-animation-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #e73c3e;
+    animation: playbtn 1.6s ease-out infinite;
+}
+
+@keyframes playbtn {
+    0%, 30% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.play-animation-btn:hover {
+    background-color: #e73c3e
+}
+
+.play-animation-btn:hover i {
+    color: #fff;
+}
+
+.play-animation-btn i {
+    position: relative;
+    top: 13px;
+    left: 0;
+    color: #e73c3e;
+    font-size: 55px;
+    transition: .5s;
+}
+
+.why-choose-us-left {
+    position: relative;
+}
+
+/* *************************** Why Choose Us Section Css End *************************** */
+
+/* *************************** Apply Now Section Css Start *************************** */
+
+.apply-now-text-left h1{
+    font-size: 2.4rem;
+}
+.step-tlimeine ul{
+    position: relative;
+}
+.step-tlimeine ul::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 24px;
+    width: 1px;
+    height: calc(100% - 100px);
+    background-color: #e73c3e;
+}
+.step-tlimeine ul li{
+    margin-bottom: 25px;
+    position: relative;
+}
+.step-tlimeine ul li::before{
+    content: attr(data-count);
+    position: absolute;
+    left: -47px;
+    top: 0;
+    height: 45px;
+    width: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    background-color: #F9FAFB;
+    border: 1px solid #e73c3e;
+    text-align: center;
+    color: #e73c3e;
+    font-size: 25px;
+    font-weight: 600;
+}
+.step-tlimeine ul li strong{
+    font-size: 24px;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+.step-tlimeine ul li p{
+    color: #606060;
+    font-size: 17px;
+    line-height: 1.8;
+}
+.calculate-rate{
+    background-color: #fdebeb;
+    border-radius: 2px;
+    padding: 45px 50px;
+}
+.calculate-rate .primary-title span{
+    color: #606060;
+    font-size: 17px;
+    font-weight: 600;
+}
+.calculate-rate .primary-title h3 {
+    margin-bottom: 40px;
+}
+.calculate-rate-form .form-group {
+    margin-bottom: 20px;
+}
+.calculate-rate-form .form-group input{
+    border: none;
+    border-radius: 0;
+    padding: 14px 11px;
+    color: #606060;
+}
+.calculate-rate-form .form-group input:focus{
+    border: none;
+    box-shadow: none;
+}
+.calculate-rate-form .form-group label {
+    margin-bottom: 8px;
+    color: #606060;
+    font-size: 17px;
+}
+.calculate-rate-form .form-group select{
+    font-size: 17px;
+    border: none;
+    border-radius: 0;
+    color: #606060;
+    height: 50px;
+}
+.form-select .select-option{
+    border: none;
+    padding: 11px 14px;
+}
+.calculate-rate-form .form-group select:focus{
+    border: none;
+    box-shadow: none;
+}
+/* *************************** Apply Now Section Css End *************************** */
+
+/* *************************** Call To Action Css Section Start *************************** */
+
+.call-to-action-wrapper{
+    background-color: #E73C3E;
+    border-radius: 5px;
+    color: #fff;
+    padding: 60px 50px;
+}
+.call-to-action-wrapper h1{
+    font-size: 2.3rem;
+    margin-bottom: 0;
+    position: relative;
+}
+.call-to-action-wrapper h1::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -18px;
+    width: 1px;
+    height: 95%;
+    background-color: #f39e9f;
+}
+.cal-to-action-right span {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #FFE;
+    color: #E73C3E;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 35px;
+    margin-right: 30px;
+}
+.cal-to-action-right a {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+/* *************************** Call To Action Css Section End *************************** */
+
+/* *************************** Company Value Css Section Start *************************** */
+
+.company-value-txt h3{
+    font-size: 36px;
+    margin-bottom: 50px;
+    font-weight: 600;
+}
+.company-item{
+    margin-bottom: 20px;
+}
+.company-item:last-child{
+    margin-bottom: 0;
+}
+.company-item .company-icon {
+    margin-right: 30px;
+    font-size: 45px;
+    color: #E73C3E;
+}
+.company-item .company-text h4 {
+    font-weight: 600;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+.company-item .company-text p{
+    color: #606060;
+    font-size: 17px;
+}
+.company-right-img {
+    margin-top: 35px;
+}
+
+/* *************************** Company Value Css Section End *************************** */
+
+/* *************************** Service Section Start *************************** */
+
+.service-tab-item{
+    border-bottom: 1px solid #cbcbcc;
+}
+.service-tab-item li{
+    flex: 1 1 auto;
+    background-color: transparent;
+}
+.service-tab-item li a.active{
+    position: relative;
+}
+.service-tab-item li a.active::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #e73c3e;
+    position: absolute;
+    left: 0;
+    bottom: -16px;
+}
+.service-tab-item li a.active span i{
+    color: #e73c3e;
+}
+.service-tab-item li a span i {
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 9%);
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    line-height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    font-size: 33px;
+    color: #464545;
+    transition: .5s;
+}
+.service-tab-item li a strong {
+    font-size: 23px;
+    font-weight: bold;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: #111;
+    background-color: transparent;
+}
+.services-tab-content-txt h3 {
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.services-tab-content-txt p {
+    color: #606060;
+    line-height: 1.8;
+}
+.services-tab-content-txt ul{
+    padding-left: 0;
+    padding: 8px 0;
+    margin-bottom: 0;
+}
+.services-tab-content-txt ul li{
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    color: #606060;
+    font-size: 18px;
+}
+.services-tab-content-txt ul li::before{
+    content: "";
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #e73c3e;
+    position: absolute;
+    left: 0;
+    top: 6px;
+}
+/* *************************** Service Section End *************************** */
+
+/* *************************** Testimonial Section Css Start *************************** */
+
+.testimonial-content p{
+    font-size: 1.6rem;
+}
+.testimonial-content .client-info h6 {
+    color: #e73c3e;
+    font-size: 18px;
+    margin-top: 25px;
+}
+.testimonial-content .client-info p {
+    font-size: 18px;
+    color: #606060;
+    margin-bottom: 0;
+}
+.testimonial-image{
+    position: relative;
+}
+.testimonial-image .testimonial-image-icon{
+    position: absolute;
+    left: 85px;
+    bottom: 48px;
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 80px;
+    box-shadow: 0 2px 28px 0 rgb(0 0 0 / 9%);
+    text-align: center;
+    font-size: 40px;
+    color: #e73c3e;
+    transition: .4s;
+}
+.testimonial-image-icon:hover{
+    color: #fff;
+    background-color: #e73c3e;
+}
+/* *************************** Testimonial Section Css End *************************** */
+
+/* *************************** Team Section Css Start *************************** */
+
+.team-member-img{
+    position: relative;
+}
+.team-member-img .team-member-profile-icon{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+.team-member-profile-icon ul{
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 23px;
+}
+.team-member-profile-icon ul li{
+    transition:  .3s ease-in-out;
+    transform: translateY(35px);
+    opacity: 0;
+    visibility: hidden;
+}
+.team-member-profile-icon ul li:nth-child(1){
+    transition-delay: .2s;
+}
+.team-member-profile-icon ul li:nth-child(2){
+    transition-delay: .3s;
+}
+.team-member-profile-icon ul li:nth-child(3){
+    transition-delay: .4s;
+}
+.team-member-profile-icon ul li:nth-child(4){
+    transition-delay: .5s;
+}
+.team-member-profile-icon ul li a {
+    background: #fff;
+    margin: 4px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    transition: .5s;
+}
+.team-member-profile-icon ul li a:hover{
+    color: #fff;
+    background-color: #e73c3e;
+}
+.team-member:hover .team-member-profile-icon ul li{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+.team-member-content h4{
+    color: #e73c3e;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.team-member-content p{
+    padding-bottom: 0;
+    color: #606060;
+}
+
+/* *************************** Team Section Css End *************************** */
+
+/* *************************** Blog Section Css Start *************************** */
+
+.blog-content-img{
+    cursor: pointer;
+}
+.blog-content-text {
+    margin-top: 25px;
+}
+.blog-content-text h2 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+    transition: .5s;
+    cursor: pointer;
+}
+.blog-content-text h2:hover{
+    color: #e73c3e;
+}
+.blog-content:hover .blog-content-text a.blog-content-txt-header{
+    letter-spacing: normal;
+    color: #111;
+}
+.blog-content-text a {
+    font-size: 18px;
+    transition: .5s;
+}
+.blog-content-text p.menu-active-text{
+    letter-spacing: 0;
+    font-size: 18px;
+    margin-bottom: .9rem;
+}
+.blog-content:hover .blog-content-text a{
+    color: #e73c3e;
+    letter-spacing: 1px;
+}
+
+/* *************************** Blog Section Css End *************************** */
+
+/* *************************** Footer Section Css Start *************************** */
+
+.footer-section{
+    background-color: #111111;
+    color: #fff;
+}
+.footer-section a{
+    color: #fff;
+    transition: .5s;
+}
+.footer-section p{
+    margin-bottom: 0;
+}
+.footer-section .container-fluid{
+    padding-left: 64px;
+    padding-right: 64px;
+}
+.footer-section .footer-top{
+    border-bottom: 1px solid #292929;
+}
+.footer-widget h3 {
+    border-bottom: 1px solid #333535;
+    padding-bottom: 18px;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.footer-widget li {
+    margin: 17px 0;
+    font-size: 17px;
+}
+.footer-widget li a{
+    transition: .5s;
+}
+.footer-widget li a:hover{
+    letter-spacing: 1px;
+    color: #e73c3e;
+}
+.footer-widget a:hover{
+    color: #e73c3e;
+}
+.footer-widget p {
+    margin-top: 26px;
+    margin-bottom: 0;
+    line-height: 1.8;
+}
+.widget-social li:hover{
+    letter-spacing: normal;
+}
+.widget-social li a{
+    display: block;
+    margin-left: 15px;
+}
+.widget-social li a i{
+    transition: .5s;
+}
+.widget-social li a:hover i{
+    color: #e73c3e;
+}
+.footer-contact-item {
+    margin-bottom: 20px;
+}
+.footer-contact-item span {
+    font-size: 17px;
+}
+.footer-contact-item span i {
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 5px;
+}
+.footer-contact-item a{
+    font-size: 17px;
+}
+.footer-mail-a{
+    margin-left: 19px;
+}
+.footer-bottom-content p {
+    color: #606060;
+    font-size: 16px;
+    font-weight: 600;
+}
+.footer-bottom-content a{
+    transition: .5s;
+}
+.footer-bottom-content a:hover{
+    color: #e73c3e;
+}
+
+/* *************************** Footer Section Css End *************************** */
+
+/* Main Css End  */
+
+/* *************************** Page.html Css Start *************************** */
+
+.home-breadcumb{
+    height: 474px;
+    background-image: url(./images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+.home-breadcumb::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, .7);
+    z-index: -1;
+}
+.home-breadcumb-content{
+    margin-top: 210px;
+}
+.home-breadcumb-content h2 {
+    font-weight: 600;
+    font-size: 46px;
+}
+.breadcrumb-item {
+    font-size: 18px;
+}
+.breadcrumb li:first-child a{
+    color: #e73c3e;
+}
+
+/* *************************** Page.html Css End *************************** */
